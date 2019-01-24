@@ -1,0 +1,27 @@
+<fieldset>
+  <legend>Cadastro de Usuários</legend>
+  <form [formGroup]="userForm">
+    <div class="form-group">
+        <label for="">Nome:</label>
+        <input type="text" formControlName="name" name="name" placeholder="Nome de usuário">
+    </div>
+
+    <div class="form-group">
+        <label for="">E-mail:</label>
+        <input type="email" formControlName="email" name="email" placeholder="Email de usuário">
+    </div>
+
+    <div class="form-group">
+        <label for="">Senha:</label>
+        <input type="password" formControlName="password" name="password" placeholder="Senha de usuário">
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" (click)="insertUser(userForm)">Enviar</button>
+    </div>
+  </form>
+</fieldset>
+
+<h1>Lista de Usuários</h1> <hr>
+
+{{usuarios | json}}
